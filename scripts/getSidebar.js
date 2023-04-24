@@ -21,10 +21,13 @@ const sidebarlist = deepGenerateSidebar(sidebars)
 
 //把数组里面的每个对象合并到一个对象里面
 let sidebar = sidebarlist.reduce((pre, cur) => Object.assign(pre, cur), {})
+const zhdir = {
+  chapter: '所有章节',
+}
 Object.entries(sidebar).forEach(([key, items]) => {
   let keyArr = splitPath(key)
-  let text = keyArr[keyArr.length - 1] 
-  
+  let entext = keyArr[keyArr.length - 1] 
+  let text = zhdir[entext] || entext
   if(sidebarObj[`/${keyArr[0]}/`]){
     sidebarObj[`/${keyArr[0]}/`].push({
       text,

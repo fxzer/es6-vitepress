@@ -1,7 +1,7 @@
 export default {
   "/chapter/": [
     {
-      "text": "chapter",
+      "text": "所有章节",
       "collapsible": true,
       "collapsed": false,
       "items": [
