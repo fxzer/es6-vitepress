@@ -22,8 +22,8 @@ export default {
           "link": "/chapter/4-string"
         },
         {
-          "text": "5.字符串的扩展",
-          "link": "/chapter/5-string-methods"
+          "text": "5.字符串的新增方法",
+          "link": "/chapter/5-stringmethods"
         },
         {
           "text": "6.正则的扩展",
@@ -46,8 +46,8 @@ export default {
           "link": "/chapter/10-object"
         },
         {
-          "text": "11.对象的扩展",
-          "link": "/chapter/11-object-methods"
+          "text": "11.对象的新增方法",
+          "link": "/chapter/11-objectmethods"
         },
         {
           "text": "12.运算符的扩展",
@@ -58,8 +58,8 @@ export default {
           "link": "/chapter/13-symbol"
         },
         {
-          "text": "14.undefined",
-          "link": "/chapter/14-set-map"
+          "text": "14.Set 和 Map 数据结构",
+          "link": "/chapter/14-setmap"
         },
         {
           "text": "15.Proxy",
@@ -82,8 +82,8 @@ export default {
           "link": "/chapter/19-generator"
         },
         {
-          "text": "20.Generator 函数的语法",
-          "link": "/chapter/20-generator-async"
+          "text": "20.Generator 函数的异步应用",
+          "link": "/chapter/20-generatorasync"
         },
         {
           "text": "21.async 函数",
@@ -94,16 +94,16 @@ export default {
           "link": "/chapter/22-class"
         },
         {
-          "text": "23.Class 的基本语法",
-          "link": "/chapter/23-class-extends"
+          "text": "23.Class 的继承",
+          "link": "/chapter/23-classextends"
         },
         {
           "text": "24.Module 的语法",
           "link": "/chapter/24-module"
         },
         {
-          "text": "25.undefined",
-          "link": "/chapter/25-"
+          "text": "25.Module 的加载实现",
+          "link": "/chapter/25-moduleloader"
         },
         {
           "text": "26.编程风格",
@@ -114,8 +114,8 @@ export default {
           "link": "/chapter/27-spec"
         },
         {
-          "text": "28.async 函数",
-          "link": "/chapter/28-async-iterator"
+          "text": "28.异步遍历器",
+          "link": "/chapter/28-asynciterator"
         },
         {
           "text": "29.ArrayBuffer",
@@ -130,7 +130,7 @@ export default {
           "link": "/chapter/31-decorator"
         },
         {
-          "text": "32.undefined",
+          "text": "32.参考链接",
           "link": "/chapter/32-reference"
         },
         {
@@ -142,12 +142,12 @@ export default {
           "link": "/chapter/34-simd"
         },
         {
-          "text": "acknowledgment.undefined",
-          "link": "/chapter/acknowledgment"
+          "text": "35.函数式编程",
+          "link": "/chapter/35-fp"
         },
         {
-          "text": "fp.undefined",
-          "link": "/chapter/fp"
+          "text": "36.鸣谢",
+          "link": "/chapter/36-acknowledgment"
         }
       ]
     }
