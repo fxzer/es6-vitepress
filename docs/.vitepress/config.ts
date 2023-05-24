@@ -18,6 +18,10 @@ export default  {
       dark: 'dracula-soft',
     },
   },
+  head:[
+    //  ['link', { rel: 'icon', type: 'image/svg+xml', href: '/es6-vitepress/logo.svg' }],
+    ['link', { rel: 'icon', href: '/es6-vitepress/favicon.ico' }],
+  ],
   themeConfig: {
     outline: 'deep',//侧边栏深度:数字或者deep
     outlineTitle: '文章目录',
