@@ -19,7 +19,6 @@ export default  {
     },
   },
   head:[
-    //  ['link', { rel: 'icon', type: 'image/svg+xml', href: '/es6-vitepress/logo.svg' }],
     ['link', { rel: 'icon', href: '/es6-vitepress/favicon.ico' }],
   ],
   themeConfig: {
@@ -30,6 +29,9 @@ export default  {
     returnToTopLabel: '返回顶部',
     sidebarMenuLabel: '目录',
     darkModeSwitchLabel: '主题切换',
+    search: {
+      provider: 'local'
+    },
     footer: {
       message: 'Released under the <a href="https://github.com/fxzer/es6-vitepress/blob/master/LICENSE">MIT License</a>.',
       copyright: 'Copyright © 2023-present <a href="https://github.com/fxzer">fxzer</a>.',
@@ -45,7 +47,7 @@ export default  {
     socialLinks,
     sidebar,
     async buildEnd() {
-      await sitemap({ hostname: 'https://fxzer.github.io/zerdocs' });
+      await sitemap({ hostname: 'https://fxzer.github.io/es6-vitepress' });
     }
   },
 } 
