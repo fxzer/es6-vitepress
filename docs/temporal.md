@@ -46,7 +46,17 @@ instant.epochMilliseconds; // => -14182980000
 
 ## Temporal.ZonedDateTime
 
-`Temporal.ZonedDateTime`表示某个时区的时间。
+`Temporal.ZonedDateTime`表示某个时区的时间。它会在 ISO8601 的标准格式后面，添加时区后缀和历法后缀。
+
+```javascript
+2020-08-05T20:06:13+09:00[Asia/Tokyo][u-ca=japanese]
+```
+
+上面示例中，`2020-08-05T20:06:13+09:00`是 ISO8601 标准格式，`[Asia/Tokyo]`是时区后缀，`[u-ca=japanese]`是历法后缀，表示采用日本历法。
+
+默认的历法是 ISO8601 规定的公历，可以省略不写。
+
+下面是使用`Temporal.ZonedDateTime.from()`新建 ZonedDateTime 实例对象的例子。
 
 ```javascript
 const zonedDateTime = Temporal.ZonedDateTime.from({
@@ -62,6 +72,65 @@ const zonedDateTime = Temporal.ZonedDateTime.from({
   nanosecond: 500
 }); // => 1995-12-07T03:24:30.0000035-08:00[America/Los_Angeles]
 ```
+
+下面是使用`Temporal.ZonedDateTime.compare()`比较两个 ZonedDateTime 实例对象的例子。
+
+```javascript
+const one = Temporal.ZonedDateTime.from('2020-11-01T01:45-07:00[America/Los_Angeles]');
+const two = Temporal.ZonedDateTime.from('2020-11-01T01:15-08:00[America/Los_Angeles]');
+
+Temporal.ZonedDateTime.compare(one, two);
+// -1
+```
+
+上面示例中，`Temporal.ZonedDateTime.compare()`返回`-1`，表示第一个时间小于（即早于）第二个时间。如果返回`1`，表示第一个时间大于第二个时间；返回`0`，表示两个时间相等。
+
+ZonedDateTime 实例对象有以下属性。
+
+- hoursInDay：指定时区的某一天一共有多少个小时，主要用来处理夏令时。
+
+```javascript
+Temporal.ZonedDateTime.from('2020-01-01T12:00-08:00[America/Los_Angeles]').hoursInDay;
+// 24
+Temporal.ZonedDateTime.from('2020-03-08T12:00-07:00[America/Los_Angeles]').hoursInDay;
+// 23
+Temporal.ZonedDateTime.from('2020-11-01T12:00-08:00[America/Los_Angeles]').hoursInDay;
+// 25
+```
+
+- daysInYear
+- inLeapYear
+
+ZonedDateTime 实例对象有以下方法。
+
+- .withTimeZone()：切换时区。
+
+```javascript
+zdt = Temporal.ZonedDateTime.from('1995-12-07T03:24:30+09:00[Asia/Tokyo]');
+zdt.toString(); // => '1995-12-07T03:24:30+09:00[Asia/Tokyo]'
+zdt.withTimeZone('Africa/Accra').toString(); // => '1995-12-06T18:24:30+00:00[Africa/Accra]'
+```
+
+- add()：增加时间。
+
+```javascript
+zdt = Temporal.ZonedDateTime.from('2020-03-08T00:00-08:00[America/Los_Angeles]');
+
+// 增加一天
+laterDay = zdt.add({ days: 1 });
+// 2020-03-09T00:00:00-07:00[America/Los_Angeles]
+// 注意：时区改变了，表示洛杉矶这个日期处于夏令时，比正常情况早一个小时
+
+laterDay.since(zdt, { largestUnit: 'hour' }).hours;
+// 23
+// 当天只有23小时
+
+laterHours = zdt.add({ hours: 24 });
+// 2020-03-09T01:00:00-07:00[America/Los_Angeles]
+laterHours.since(zdt, { largestUnit: 'hour' }).hours; // 24
+```
+
+- .until()：计算两个时间之间的差异。
 
 ## Temporal.PlainDate
 
@@ -181,4 +250,5 @@ date.daysInYear; // => 365
 ## 参考链接
 
 - [Temporal documentation](https://tc39.es/proposal-temporal/docs/)
+- [JS Dates Are About to Be Fixed](https://docs.timetime.in/blog/js-dates-finally-fixed/)
 
