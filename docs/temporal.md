@@ -2,6 +2,18 @@
 
 Temporal 是一个表示日期时间的全新 API，对目前的 Date API 的诸多问题进行修正。
 
+它有几个核心概念。
+
+- 当前时间：表示此时此刻的时间，位于 Temporal.now 对象。
+- 时点（instant），表示历史上某个唯一时间，其中 Temporal.Instant 对象表示时间戳，Temporal.ZonedDateTime 表示带有时区的日期时间。
+- 时钟时间（wall-clock times），表示本地时间，包含以下几个对象，不涉及时区。
+    - Temporal.PlainDateTime：完整的日期和时间。
+    - Temporal.PlainDate：仅限于日期。
+    - Temporal.PlainYearMonth：仅限于年月。
+    - Temporal.PlainMonthDay：仅限于月和日。
+    - Temporal.PlainTime：不包含日期的时间。
+- 持续时间（durations），表示两个时间点之间的差异，位于 Temporal.Duration 对象。
+
 ## Temporal.Now
 
 `Temporal.Now`表示当前系统的准确时间。
@@ -16,6 +28,12 @@ Temporal 是一个表示日期时间的全新 API，对目前的 Date API 的诸
 ```javascript
 // 返回 UTC 的当前时间
 Temporal.Now.instant().toString()
+
+// 系统时区的当前时间
+Temporal.Now.plainDateTimeISO() // 2025-01-22T11:46:36.144
+
+// 当前时间对应 America/New_York 时区的时间
+Temporal.Now.plainDateTimeISO("America/New_York") // 2025-01-22T05:47:02.555
 
 // 返回某个时区的当前日期时间
 Temporal.Now.zonedDateTimeISO('Asia/Shanghai').toString()
@@ -34,14 +52,25 @@ const now = Temporal.Now.zonedDateTimeISO('America/New_York');
 console.log(now.toString());
 ```
 
+下面的例子是获取当前时间对应的农历年。
+
+```javascript
+const currentYear = Temporal.Now.plainDateISO().withCalendar("chinese").year;
+```
+
 ## Temporal.Instant
 
-`Temporal.Instant`表示某个固定的时间。
+`Temporal.Instant`表示某个固定的时点。
 
 ```javascript
 const instant = Temporal.Instant.from('1969-07-20T20:17Z');
 instant.toString(); // => '1969-07-20T20:17:00Z'
 instant.epochMilliseconds; // => -14182980000
+
+// 某个 Unix 时间戳对应的时点
+const launch = Temporal.Instant.fromEpochMilliseconds(1851222399924);
+const now = Temporal.Now.instant();
+const duration = now.until(launch, { smallestUnit: "hour" });
 ```
 
 ## Temporal.ZonedDateTime
@@ -211,6 +240,27 @@ birthdayIn2030.toString() // 2030-12-15
 birthdayIn2030.dayOfWeek // 7
 ```
 
+下面是农历一月一日（大年初一）的例子。
+
+```javascript
+const chineseNewYear = Temporal.PlainMonthDay.from({
+  monthCode: "M01",
+  day: 1,
+  calendar: "chinese",
+});
+
+const currentYear = Temporal.Now.plainDateISO().withCalendar("chinese").year;
+
+// 获取下一个春节
+let nextCNY = chineseNewYear.toPlainDate({ year: currentYear });
+// 如果 nextCNY 早于当前时间，则向后移动一年
+if (Temporal.PlainDate.compare(nextCNY, Temporal.Now.plainDateISO()) <= 0) {
+  nextCNY = nextCNY.add({ years: 1 });
+}
+
+nextCNY.withCalendar("iso8601").toLocaleString() // 1/29/2025
+```
+
 ## Temporal.Duration
 
 `Temporal.Duration`表示时长。
@@ -247,8 +297,26 @@ date.monthsInYear; // => 12
 date.daysInYear; // => 365
 ```
 
+## Temporal.Duration
+
+Temporal.Duration 表示一个持续的时间对象。
+
+```javascript
+const durations = [
+  Temporal.Duration.from({ hours: 1 }),
+  Temporal.Duration.from({ hours: 2 }),
+  Temporal.Duration.from({ hours: 1, minutes: 30 }),
+  Temporal.Duration.from({ hours: 1, minutes: 45 }),
+];
+
+durations.sort(Temporal.Duration.compare);
+console.log(durations.map((d) => d.toString()));
+// [ 'PT1H', 'PT1H30M', 'PT1H45M', 'PT2H' ]
+````
+
 ## 参考链接
 
 - [Temporal documentation](https://tc39.es/proposal-temporal/docs/)
 - [JS Dates Are About to Be Fixed](https://docs.timetime.in/blog/js-dates-finally-fixed/)
+- [JavaScript Temporal is coming](https://developer.mozilla.org/en-US/blog/javascript-temporal-is-coming/)
 
