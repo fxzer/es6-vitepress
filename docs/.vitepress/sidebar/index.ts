@@ -1,7 +1,7 @@
 export default {
   "/chapter/": [
     {
-      "text": "所有章节",
+      "text": "chapter",
       "collapsible": true,
       "collapsed": false,
       "items": [
@@ -22,7 +22,11 @@ export default {
           "link": "/chapter/4-string"
         },
         {
-          "text": "5.字符串的新增方法",
+          "text": "5.字符串的扩展",
+          "link": "/chapter/5-string-methods"
+        },
+        {
+          "text": "5.undefined",
           "link": "/chapter/5-stringmethods"
         },
         {
@@ -46,7 +50,11 @@ export default {
           "link": "/chapter/10-object"
         },
         {
-          "text": "11.对象的新增方法",
+          "text": "11.对象的扩展",
+          "link": "/chapter/11-object-methods"
+        },
+        {
+          "text": "11.undefined",
           "link": "/chapter/11-objectmethods"
         },
         {
@@ -58,7 +66,11 @@ export default {
           "link": "/chapter/13-symbol"
         },
         {
-          "text": "14.Set 和 Map 数据结构",
+          "text": "14.undefined",
+          "link": "/chapter/14-set-map"
+        },
+        {
+          "text": "14.undefined",
           "link": "/chapter/14-setmap"
         },
         {
@@ -82,7 +94,11 @@ export default {
           "link": "/chapter/19-generator"
         },
         {
-          "text": "20.Generator 函数的异步应用",
+          "text": "20.Generator 函数的语法",
+          "link": "/chapter/20-generator-async"
+        },
+        {
+          "text": "20.undefined",
           "link": "/chapter/20-generatorasync"
         },
         {
@@ -94,7 +110,11 @@ export default {
           "link": "/chapter/22-class"
         },
         {
-          "text": "23.Class 的继承",
+          "text": "23.Class 的基本语法",
+          "link": "/chapter/23-class-extends"
+        },
+        {
+          "text": "23.undefined",
           "link": "/chapter/23-classextends"
         },
         {
@@ -102,7 +122,11 @@ export default {
           "link": "/chapter/24-module"
         },
         {
-          "text": "25.Module 的加载实现",
+          "text": "25.undefined",
+          "link": "/chapter/25-"
+        },
+        {
+          "text": "25.undefined",
           "link": "/chapter/25-moduleloader"
         },
         {
@@ -114,7 +138,11 @@ export default {
           "link": "/chapter/27-spec"
         },
         {
-          "text": "28.异步遍历器",
+          "text": "28.async 函数",
+          "link": "/chapter/28-async-iterator"
+        },
+        {
+          "text": "28.undefined",
           "link": "/chapter/28-asynciterator"
         },
         {
@@ -130,7 +158,7 @@ export default {
           "link": "/chapter/31-decorator"
         },
         {
-          "text": "32.参考链接",
+          "text": "32.undefined",
           "link": "/chapter/32-reference"
         },
         {
@@ -142,12 +170,33 @@ export default {
           "link": "/chapter/34-simd"
         },
         {
-          "text": "35.函数式编程",
+          "text": "35.undefined",
           "link": "/chapter/35-fp"
         },
         {
-          "text": "36.鸣谢",
+          "text": "36.undefined",
           "link": "/chapter/36-acknowledgment"
+        },
+        {
+          "text": "acknowledgment.undefined",
+          "link": "/chapter/acknowledgment"
+        },
+        {
+          "text": "fp.undefined",
+          "link": "/chapter/fp"
+        }
+      ]
+    }
+  ],
+  "/temporal.md/": [],
+  "/undefined/": [
+    {
+      "collapsible": true,
+      "collapsed": false,
+      "items": [
+        {
+          "text": "temporal.undefined",
+          "link": "/temporal"
         }
       ]
     }
