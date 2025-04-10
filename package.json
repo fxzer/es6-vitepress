@@ -6,18 +6,18 @@
     "gs": "node scripts/getSidebar.js"
   },
   "devDependencies": {
-    "flexsearch": "^0.7.31",
-    "markdown-it": "^13.0.1",
-    "unplugin-auto-import": "^0.14.2",
-    "unplugin-icons": "^0.15.2",
-    "unplugin-vue-components": "^0.23.0",
-    "vite": "^4.1.1",
-    "vitepress": "^1.0.0-alpha.45",
-    "vitepress-plugin-search": "^1.0.4-alpha.19",
-    "vue": "^3.2.47"
+    "flexsearch": "^0.8.151",
+    "markdown-it": "^14.1.0",
+    "unplugin-auto-import": "^19.1.2",
+    "unplugin-icons": "^22.1.0",
+    "unplugin-vue-components": "^28.4.1",
+    "vite": "^4.5.12",
+    "vitepress": "^1.6.3",
+    "vitepress-plugin-search": "^1.0.4-alpha.22",
+    "vue": "^3.5.13"
   },
   "dependencies": {
-    "sass": "^1.58.0",
-    "sitemap-ts": "^1.2.2"
+    "sass": "^1.86.3",
+    "sitemap-ts": "^1.8.0"
   }
 }
