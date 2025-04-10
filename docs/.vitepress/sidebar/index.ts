@@ -170,21 +170,8 @@ export default {
           "link": "/chapter/34-simd"
         },
         {
-<<<<<<< HEAD
-          "text": "35.undefined",
-          "link": "/chapter/35-fp"
-        },
-        {
-          "text": "36.undefined",
-          "link": "/chapter/36-acknowledgment"
-        },
-        {
-          "text": "acknowledgment.undefined",
-          "link": "/chapter/acknowledgment"
-=======
           "text": "35.函数式编程",
           "link": "/chapter/35-fp"
->>>>>>> db75755 (update: docs structure)
         },
         {
           "text": "36.鸣谢",
