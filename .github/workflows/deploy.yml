@@ -20,7 +20,7 @@ jobs:
 
       - name: Setup Node  🎬
         uses: actions/setup-node@main
-        with
+        with:
           node-version: 'lts/*'
 
       - name: Install pnpm
