@@ -18,5 +18,5 @@ dist
 
 # webstorm
 .idea/
-
-
+.DS_Store
+cache
