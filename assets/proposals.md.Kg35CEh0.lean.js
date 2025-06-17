@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ag as p}from"./chunks/framework.iek1r8MW.js";const y=JSON.parse('{"title":"最新提案","description":"","frontmatter":{},"headers":[],"relativePath":"proposals.md","filePath":"proposals.md"}'),h={name:"proposals.md"};function l(k,s,t,e,r,d){return n(),a("div",null,s[0]||(s[0]=[p("",129)]))}const c=i(h,[["render",l]]);export{y as __pageData,c as default};

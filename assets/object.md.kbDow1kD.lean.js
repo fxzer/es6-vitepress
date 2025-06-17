@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ag as p}from"./chunks/framework.iek1r8MW.js";const c=JSON.parse('{"title":"对象的扩展","description":"","frontmatter":{},"headers":[],"relativePath":"object.md","filePath":"object.md"}'),l={name:"object.md"};function h(e,s,k,t,r,d){return n(),a("div",null,s[0]||(s[0]=[p("",172)]))}const y=i(l,[["render",h]]);export{c as __pageData,y as default};

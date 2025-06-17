@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ag as p}from"./chunks/framework.iek1r8MW.js";const g=JSON.parse('{"title":"运算符的扩展","description":"","frontmatter":{},"headers":[],"relativePath":"operator.md","filePath":"operator.md"}'),l={name:"operator.md"};function e(h,s,k,t,r,d){return n(),a("div",null,s[0]||(s[0]=[p("",90)]))}const y=i(l,[["render",e]]);export{g as __pageData,y as default};

@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ag as p}from"./chunks/framework.iek1r8MW.js";const y=JSON.parse('{"title":"编程风格","description":"","frontmatter":{},"headers":[],"relativePath":"style.md","filePath":"style.md"}'),l={name:"style.md"};function h(k,s,e,t,r,d){return n(),a("div",null,s[0]||(s[0]=[p("",91)]))}const c=i(l,[["render",h]]);export{y as __pageData,c as default};

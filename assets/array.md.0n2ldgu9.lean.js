@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ag as p}from"./chunks/framework.iek1r8MW.js";const y=JSON.parse('{"title":"数组的扩展","description":"","frontmatter":{},"headers":[],"relativePath":"array.md","filePath":"array.md"}'),h={name:"array.md"};function l(k,s,e,t,r,d){return n(),a("div",null,s[0]||(s[0]=[p("",260)]))}const c=i(h,[["render",l]]);export{y as __pageData,c as default};

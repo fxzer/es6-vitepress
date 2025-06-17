@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ag as p}from"./chunks/framework.iek1r8MW.js";const y=JSON.parse('{"title":"async 函数","description":"","frontmatter":{},"headers":[],"relativePath":"async.md","filePath":"async.md"}'),l={name:"async.md"};function h(k,s,e,t,r,d){return n(),a("div",null,s[0]||(s[0]=[p("",162)]))}const c=i(l,[["render",h]]);export{y as __pageData,c as default};

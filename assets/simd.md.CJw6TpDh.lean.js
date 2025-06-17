@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ag as h}from"./chunks/framework.iek1r8MW.js";const g=JSON.parse('{"title":"SIMD","description":"","frontmatter":{},"headers":[],"relativePath":"simd.md","filePath":"simd.md"}'),k={name:"simd.md"};function l(p,s,t,e,r,d){return n(),a("div",null,s[0]||(s[0]=[h("",179)]))}const A=i(k,[["render",l]]);export{g as __pageData,A as default};

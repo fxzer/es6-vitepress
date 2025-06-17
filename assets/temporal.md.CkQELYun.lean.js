@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ag as l}from"./chunks/framework.iek1r8MW.js";const y=JSON.parse('{"title":"Temporal API","description":"","frontmatter":{},"headers":[],"relativePath":"temporal.md","filePath":"temporal.md"}'),h={name:"temporal.md"};function p(k,s,t,e,r,d){return n(),a("div",null,s[0]||(s[0]=[l("",69)]))}const A=i(h,[["render",p]]);export{y as __pageData,A as default};

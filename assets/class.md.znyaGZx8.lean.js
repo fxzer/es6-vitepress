@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ag as p}from"./chunks/framework.iek1r8MW.js";const g=JSON.parse('{"title":"Class 的基本语法","description":"","frontmatter":{},"headers":[],"relativePath":"class.md","filePath":"class.md"}'),l={name:"class.md"};function h(e,s,k,t,r,d){return n(),a("div",null,s[0]||(s[0]=[p("",212)]))}const y=i(l,[["render",h]]);export{g as __pageData,y as default};

@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ag as p}from"./chunks/framework.iek1r8MW.js";const g=JSON.parse('{"title":"Proxy","description":"","frontmatter":{},"headers":[],"relativePath":"proxy.md","filePath":"proxy.md"}'),l={name:"proxy.md"};function h(k,s,e,t,r,d){return n(),a("div",null,s[0]||(s[0]=[p("",204)]))}const c=i(l,[["render",h]]);export{g as __pageData,c as default};

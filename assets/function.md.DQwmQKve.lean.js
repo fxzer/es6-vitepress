@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ag as p}from"./chunks/framework.iek1r8MW.js";const y=JSON.parse('{"title":"函数的扩展","description":"","frontmatter":{},"headers":[],"relativePath":"function.md","filePath":"function.md"}'),l={name:"function.md"};function h(k,s,e,t,r,d){return n(),a("div",null,s[0]||(s[0]=[p("",294)]))}const c=i(l,[["render",h]]);export{y as __pageData,c as default};

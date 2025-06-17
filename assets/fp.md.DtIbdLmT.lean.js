@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ag as h}from"./chunks/framework.iek1r8MW.js";const y=JSON.parse('{"title":"函数式编程","description":"","frontmatter":{},"headers":[],"relativePath":"fp.md","filePath":"fp.md"}'),k={name:"fp.md"};function p(l,s,t,e,r,d){return n(),a("div",null,s[0]||(s[0]=[h("",49)]))}const A=i(k,[["render",p]]);export{y as __pageData,A as default};
